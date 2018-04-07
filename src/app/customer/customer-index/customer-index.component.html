@@ -1,0 +1,54 @@
+<div class="row orders justify-content-between customer-app wrapper">
+  <div class="col-m-2 order-col">
+    <div class="orders-columns">
+      <div class="column-header p-2 mb-2">INCOMING ORDERS</div>
+      <div class="container" style="min-height: 100px;" [dragula]="'first-bag'" [dragulaModel]='orders1'>
+        <div *ngFor="let order of orders1"
+          class="order order--past mb-3">
+          <div class="header">
+            {{ order }}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col-m-2 order-col">
+    <div class="orders-columns">
+      <div class="column-header p-2 mb-2">ORDERS IN KITCHEN</div>
+      <div class="container" [dragula]="'first-bag'" [dragulaModel]='orders2'>
+        <div *ngFor="let order of orders2"
+          class="order order--past mb-3">
+          <div class="header">
+            {{ order }}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col-m-2 order-col">
+    <div class="orders-columns">
+      <div class="column-header p-2 mb-2">IN DELIVERY</div>
+      <div class="container" style="min-height: 100px;" [dragula]="'first-bag'" [dragulaModel]='orders3'>
+        <div *ngFor="let order of orders3"
+          class="order order--past mb-3">
+          <div class="header">
+            {{ order }}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col-m-2 order-col">
+    <div class="orders-columns">
+      <div class="column-header p-2 mb-2">DELIVERD</div>
+      <div class="container" style="min-height: 100px;" [dragula]="'first-bag'" [dragulaModel]='orders4'>
+        <div *ngFor="let order of orders4"
+          class="order order--past mb-3">
+          <div class="header">
+            {{ order }}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
